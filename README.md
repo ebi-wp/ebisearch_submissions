@@ -32,3 +32,19 @@ Further details on how to fill in the form can be found in the
 
 - [XML format specification](XML_specification.md)
 - [JSON format specification](JSON_specification.md)
+
+
+## Validation
+
+XML content can be validated using two methods:
+
+- The command line tool `xmllint` can be used to validate against the EBI Search schema.
+This is a primarily a syntactic evaluation, and does limited content checking. An example command
+line might be:
+
+  `xmllint --noout --schema http://www.ebi.ac.uk/ebisearch/XML4dbDumps.xsd /path/to/datafile.xml`
+
+- There is a [validation tool](https://www.omicsdi.org/validate) with more content checking that will
+flag missing fields for portal site content. There is a size limitation for the file being checked,
+so this tool should be used to check a limited subset of the data.
+
